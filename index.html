@@ -17,64 +17,25 @@
     <main class="main-index">
 
         <div class="container-full-carrusel">
-
-                <!--FLECHAS MOVER CARRUSEL-->
-            <div class="flecha-izq">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 6 10" width="10px">
-                    <path d="m5 0l-5 5 5 5 1-1-4-4 4-4">
-                </svg>
+            <div class="atras">
+                &#60
             </div>
-
-
-            <!--BARRAS MOVER CARRUSEL-->
-            <!-- <div class="barra-izq"></div>
-            <div class="barra-der"></div> -->
-
+            <div class="adelante">
+                &#62
+            </div>
 
             <!--CARRUSEL-->
             <section class="carrusel-info col-12 col-s-12">
-                <div class="carrusel-info-text col-5 col-s-9">
+                <div class="carrusel-info-text col-5 col-s-9" id="text">
                     <h2>Juegos</h2>
-                    <p>Nuestro juegos Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt magnam fugiat nobis
-                        libero. Distinctio ut voluptates quibusdam ipsa, cum molestiae a voluptatum quos reiciendis
-                        voluptatibus, voluptatem magni eligendi impedit nulla.</p>
+                    <p>En (Nombre) ofrecemos experiencias inovidables, donde ponemos a prueba todos los sentidos del jugador. Explora nuestros juegos y sumergete en un mundo de supervivencia y horror.</p>
                     <a href="./juegos.html">Ver más</a>
                 </div>
                 <img src="imagenes/revillage.jpg" alt="fondo-revillage" class="carrusel-info-img col-12 col-s-12">
-
-                
-                <!-- <div class="carrusel-info-text col-5 col-s-9">
-                    <h2>Nombre Compañia</h2>
-                    <p>Somos (nombre), Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt magnam fugiat nobis libero. Distinctio ut voluptates quibusdam ipsa, cum molestiae a voluptatum quos reiciendis voluptatibus, voluptatem magni eligendi impedit nulla.</p>
-                    <a href="./nosotros.html">Ver más</a>
-                </div>
-                <img src="imagenes/outlast.jpg" alt="fondo-outlast" class="carrusel-info-img col-12 col-s-12">-->
-
-                <!--
-                <div class="carrusel-info-text col-5 col-s-9">
-                    <h2>Contacto</h2>
-                    <p>¿Querés contactarte Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt magnam fugiat nobis libero. Distinctio ut voluptates quibusdam ipsa, cum molestiae a voluptatum quos reiciendis voluptatibus, voluptatem magni eligendi impedit nulla.</p>
-                    <a href="./contacto.html">Ver más</a>
-                </div>
-                <img src="imagenes/plaguetale.jpg" alt="fondo-plaguetale" class="carrusel-info-img col-12 col-s-12">-->
-
             </section>
-
-            
-            <div class="flecha-der">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 6 10" width="10px">
-                    <path d="m1 0l5 5-5 5-1-1 4-4-4-4">
-                </svg>
-            </div>
-
         </div>
 
-        
-
-        
-
         <section class="bajo-carrusel">
-
             <div class="cont-plataformas">
                 <h2>Encontranos en tus plataformas favoritas</h2>
                 <div class="plataformas-flex">
@@ -89,9 +50,9 @@
                 <div class="subscripcion-texto">
                     <p>Subscribete y mantente al tanto de todas las noticias y actualizaciones de (nombre estudio)</p>
                 </div>
-                <div class="subscripcion-email">
-                    <form>
-                        <input type="email" name="email-subscripcion" id="email-subscripcion" placeholder="Escribe tu email aquí...">
+                <div class="subscripcion-email col-12 col-s-12">
+                    <form class="col-12 col-s-12" action="" id="f-subscripcion" >
+                        <input type="email" name="email-subscripcion" id="email-subscripcion" placeholder="Escribe tu email aquí..." class="col-11 col-s-11" onkeypress="return subscribirse(event)">
                     </form>
                 </div>
             </div>

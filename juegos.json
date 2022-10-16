@@ -1,0 +1,49 @@
+{
+    "games": [
+        {
+            "idGame": 0,
+            "name": "Resident Evil Village",
+            "fechaPubic": "02/05/2021",
+            "plot": "Ambientada unos años después de los escalofriantes sucesos del aclamado Resident Evil 7: Biohazard, esta flamante nueva historia arranca con Ethan Winters y su esposa Mia viviendo plácidamente en un nuevo lugar, lejos de pesadillas pasadas. Sin embargo, justo cuando están empezando su nueva vida juntos, la tragedia vuelve a cebarse con ellos.",
+            "urlWeb": "https://www.residentevil.com/village/es/",
+            "image": "https://www.cultture.com/pics/2021/01/noticias-que-te-podrias-haber-perdido-el-2521-1800-de-la-edicion-de-coleccionista-de-re-village-el-posible-fantasma-de-tsushima-version-ps5-y-mas.jpg"
+        },
+
+        {
+            "idGame": 1,
+            "name": "Outlast",
+            "fechaPubic": "04/09/2013",
+            "plot": "El horror aguarda en las lejanas montañas de Colorado, dentro del manicomio del monte Massive. Tras pasar años abandonado, el psiquiátrico ha vuelto a abrir sus puertas. El departamento de “investigación y caridad” de la corporación transnacional Murkoff ha estado trabajando en su interior en la más estricta clandestinidad... hasta ahora.",
+            "urlWeb": "https://redbarrelsgames.com/games/outlast/",
+            "image": "https://images7.alphacoders.com/703/703817.jpg"
+        },
+
+        {
+            "idGame": 2,
+            "name": "The Evil Within",
+            "fechaPubic": "14/10/2014",
+            "plot": "Durante la inspección de la escena de un terrible asesinato en masa, el inspector Sebastián Castellanos y sus colegas se encuentran con una misteriosa y poderosa fuerza. Tras presenciar la matanza de sus compañeros, Sebastián cae en una emboscada y pierde el conocimiento. Al despertar, se encuentra dentro de un mundo sobrecogedor y desquiciado en el que espantosos seres vagan entre los cadáveres. Sebastián se embarcará en un viaje aterrador para descubrir el origen de estas fuerzas del mal y deberá enfrentarse a un terror inimaginable con un único objetivo: sobrevivir.",
+            "urlWeb": "https://bethesda.net/es/game/the-evil-within",
+            "image": "https://vgezone.com/wp-content/uploads/2017/10/TEW2_Key_Art_1_Web-2.png"
+        },
+
+        {
+            "idGame": 3,
+            "name": "Dead Space",
+            "fechaPubic": "13/10/2008",
+            "plot": "Una enorme nave minera del espacio profundo se oscurece después de desenterrar un extraño artefacto en un planeta distante. El ingeniero Isaac Clarke se embarca en la misión de reparación, solo para descubrir un baño de sangre de pesadilla: la tripulación del barco fue horriblemente asesinada e infectada por un flagelo alienígena. Ahora Isaac está aislado, atrapado y comprometido en una lucha desesperada por sobrevivir.",
+            "urlWeb": "https://www.ea.com/es-es/games/dead-space/dead-space",
+            "image": "https://i.blogs.es/d7887a/1366_2000/1366_2000.jpeg"
+        },
+
+        {
+            "idGame": 4,
+            "name": "Amnesia: The Dark Descent",
+            "fechaPubic": "08/09/2010",
+            "plot": "El juego sitúa al jugador en el papel de Daniel, que despierta en un oscuro castillo sin apenas recuerdos de quién es y su pasado.5​ Todo lo que puede recordar es su nombre, su origen londinense y que algo está persiguiéndolo.6​7​ Al encontrar una nota escrita por sí mismo que le insistía a descender a la parte inferior del castillo y matar a su enemigo, decide comenzar el descenso. A partir de hojas de su propio diario, que se encuentran esparcidas a lo largo del juego, Daniel va recobrando su memoria y redescubriendo su identidad y su historia.",
+            "urlWeb": "https://amnesiagame.com/#main",
+            "image": "https://www.nerdlabco.com/wp-content/uploads/2020/05/am.jpg"
+        }
+
+    ]
+}
