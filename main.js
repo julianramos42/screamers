@@ -2,7 +2,7 @@
 //Insertar HTML de HEADER y FOOTER
 document.getElementById("header").innerHTML = `
 <nav>
-<a href="./index.html"><img src="./imagenes/control-de-juego.png" alt="logo"></a>
+<a href="./index.html"><img src="./imagenes/logo.png" alt="logo"></a>
 
 <!--Aparece en celulares-->
 <svg onclick="showMenu()" class="menu-hamburger hide-l" viewBox="0 0 100 80" width="30" height="30">
@@ -50,12 +50,12 @@ document.getElementById("header").innerHTML = `
 </nav>
 
 <ul class="nav-redes hide">
-<li><a href="#"><img src="./imagenes/facebook.png" alt="facebook"></a></li>
-<li><a href="#"><img src="./imagenes/gorjeo.png" alt="twitter"></a></li>
-<li><a href="#"><img src="./imagenes/instagram.png" alt="instagram"></a></li>
-<li><a href="#"><img src="./imagenes/youtube.png" alt="youtube"></a></li>
-<li><a href="#"><img src="./imagenes/discord.png" alt="discord"></a></li>
-<li><a href="#"><img src="./imagenes/tumblr.png" alt="tumblr"></a></li>
+<li><a href="https://www.facebook.com" target="_blank"><img src="./imagenes/facebook.png" alt="facebook"></a></li>
+                <li><a href="https://www.twitter.com" target="_blank"><img src="./imagenes/gorjeo.png" alt="twitter"></a></li>
+                <li><a href="https://www.instagram.com" target="_blank"><img src="./imagenes/instagram.png" alt="instagram"></a></li>
+                <li><a href="https://www.youtube.com" target="_blank"><img src="./imagenes/youtube.png" alt="youtube"></a></li>
+                <li><a href="https://www.discord.com" target="_blank"><img src="./imagenes/discord.png" alt="discord"></a></li>
+                <li><a href="https://www.tumblr.com" target="_blank"><img src="./imagenes/tumblr.png" alt="tumblr"></a></li>
 </ul>
 `
 document.getElementById("footer").innerHTML=`
@@ -63,28 +63,28 @@ document.getElementById("footer").innerHTML=`
 
 <div class="box col-3">
     <h2>NOSOTROS</h2>
-    <p>Somos (nombre), una desarrolladora de videosjuegos de horror y suspenso. Para saber mas hace click <a
-            href="nosotros.html"><strong>aquí</strong></a>.</p>
+    <p>Somos Screamers, una desarrolladora de videojuegos de horror y suspenso. Para saber más, hacé click <a
+            href="nosotros.html"><strong>acá</strong></a>.</p>
 </div>
 
 <div class="logo" col-6>
-    <a href="./index.html"><img src="./imagenes/control-de-juego.png" alt="logo"></a>
+    <a href="./index.html"><img src="./imagenes/logo.png" alt="logo"></a>
 </div>
 
 <div class="box col-3">
     <h2>SIGUENOS</h2>
     <ul class="nav-redes">
-        <li><a href="#"><img src="./imagenes/facebook.png" alt="facebook"></a></li>
-        <li><a href="#"><img src="./imagenes/gorjeo.png" alt="twitter"></a></li>
-        <li><a href="#"><img src="./imagenes/instagram.png" alt="instagram"></a></li>
-        <li><a href="#"><img src="./imagenes/youtube.png" alt="youtube"></a></li>
-        <li><a href="#"><img src="./imagenes/discord.png" alt="discord"></a></li>
-        <li><a href="#"><img src="./imagenes/tumblr.png" alt="tumblr"></a></li>
+    <li><a href="https://www.facebook.com" target="_blank"><img src="./imagenes/facebook.png" alt="facebook"></a></li>
+    <li><a href="https://www.twitter.com" target="_blank"><img src="./imagenes/gorjeo.png" alt="twitter"></a></li>
+    <li><a href="https://www.instagram.com" target="_blank"><img src="./imagenes/instagram.png" alt="instagram"></a></li>
+    <li><a href="https://www.youtube.com" target="_blank"><img src="./imagenes/youtube.png" alt="youtube"></a></li>
+    <li><a href="https://www.discord.com" target="_blank"><img src="./imagenes/discord.png" alt="discord"></a></li>
+    <li><a href="https://www.tumblr.com" target="_blank"><img src="./imagenes/tumblr.png" alt="tumblr"></a></li>
     </ul>
 </div>
 </div>
 <div class="copyright">
-<small>&copy; 2022 <strong>Grupo 4</strong> - Todos los Derechos Reservados</small>
+<small>&copy; 2022 <strong>Grupo 4</strong> - Codo a Codo 2022 - Todos los Derechos Reservados</small>
 </div>
 `
 
@@ -137,30 +137,50 @@ function validarFormulario(evento) {
     this.submit();
 }
 
+
+
+
+
+
 function subscribirse(e){
     if(e && e.keyCode !== 0) {
-        alert("¡Suscripción éxitosa!");
-        return;
+        if(document.getElementById('email-subscripcion').value == ""){
+            alert("Por favor, ingrese su mail");
+            return;
+        }
+        else{
+            alert("¡Suscripción éxitosa!");
+            return;
+        }
+        
      }
 }
+
+
+
+
+
+
+
+
 
 // CARROUSEL
 var textos = [
     {
         titulo: 'Juegos',
-        descripcion: 'En (Nombre) ofrecemos experiencias inovidables, donde ponemos a prueba todos los sentidos del jugador. Explora nuestros juegos y sumergete en un mundo de supervivencia y horror.',
+        descripcion: 'En Screamers ofrecemos experiencias inovidables, donde ponemos a prueba todos los sentidos del jugador. Explora nuestros juegos y sumergete en un mundo de supervivencia y horror.',
         img: 'imagenes/revillage.jpg',
         link: './juegos.html'
     },
     {
-        titulo: 'Nuestra Compañia',
-        descripcion: 'Somosss experiencias inovidables, donde ponemos a prueba todos los sentidos del jugador. Explora nuestros juegos y sumergete en un mundo de supervivencia y horror.',
+        titulo: 'Nosotros',
+        descripcion: 'Nuestro estudio se conforma por fanáticos del género, dedicados a demostrar lo que es el verdadero terror. Entérate de nosotros.',
         img: 'imagenes/outlast.jpg',
         link: './nosotros.html'
     },
     {
         titulo: 'Contacto',
-        descripcion: 'dsadasdasdas ofrecemos experiencias inovidables, donde ponemos a prueba todos los sentidos del jugador. Explora nuestros juegos y sumergete en un mundo de supervivencia y horror.',
+        descripcion: 'Sugerencias, opiniones, oportunidades. Estamos enfocados a escucharlos y lograr hacer de lo nuestro la experiencia más real jamás sentida. Escríbenos.',
         img: 'imagenes/plaguetale.jpg',
         link: './contacto.html'
     },
@@ -217,3 +237,38 @@ document.addEventListener("DOMContentLoaded", () => {
     let contenedor = document.querySelector('.container-full-carrusel')
     carrousel(contenedor);
 });
+
+const { createApp } = Vue  
+  createApp({
+    data() {
+      return {
+        url:'https://my-json-server.typicode.com/nach09/api-json-gam3s/games',
+        games:[],
+        error:false,
+        nroerror:0,
+        cargando:true
+      }
+    },  
+    methods: {
+      fetchData(url) {
+ 
+          fetch(url)
+              .then(response => response.json())
+              .then(data => {
+                this.games=data
+                this.cargando=false
+                 }
+              )
+              .catch(error=>{
+                console.log("error"+error)
+                this.error=true
+                this.nroerror=error
+              }
+              )
+      }
+    },
+    created(){
+ 
+      this.fetchData(this.url)
+    }
+  }).mount('.main-juegos')

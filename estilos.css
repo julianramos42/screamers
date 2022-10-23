@@ -10,25 +10,10 @@
     src: url('fonts/BigShouldersText-Thin.ttf');
 }
 
-@font-face {
-    font-family: 'annie';
-    src: url('fonts/AnnieUseYourTelescope-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'nanum';
-    src: url('fonts/NanumPenScript-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'khand';
-    src: url('fonts/Khand-Light.ttf');
-}
 
 ::-webkit-scrollbar{
     display: none;
 }
-
 
 
 /* Para celulares */
@@ -38,50 +23,51 @@
 
 
 @media only screen and (max-width: 600px){
+
     .hide{display: none;}
     .header img{height: 40px;}
     .main-index .carrusel-info > .carrusel-info-text{padding: 30px;}
     .main-index .carrusel-info > .carrusel-info-text p{font-size: 13px;}
     
-
-
     .header nav{width: 100%; justify-content: space-between;}
     .main-juegos .container-juego{flex-direction: column; margin: 20px;}
     .main-juegos .container-juego .card-texto{padding: 30px;}
-    .section-contacto form{
-        padding: 50px 50px 0 50px;}
+    .section-contacto form{padding: 50px 50px 0 50px;}
 
+    .nosotros-bl2{ flex-direction: column; align-items: stretch;}
+    .nosotros-bl2 .bl-text p{padding: 40px;}
+    .nosotros-bl2 .bl-img{flex: 1 1 60%;}
+    .nosotros-bl2 .bl-text{flex: 1 1 40%;}
 
+    .nosotros-bl4{ flex-direction: column-reverse; align-items: stretch;}
+    .nosotros-bl4 .bl-img{flex: 1 1 60%;}
+    .nosotros-bl4 .bl-text{flex: 1 1 40%;}
+    .nosotros-bl4 .bl-text p{margin: 40px;}
 
-    
+    .main-index .container-full-carrusel{flex-direction: column;}
+
 }
 
 
 @media only screen and (max-width: 768px){
+
     .main-index .flecha-izq, .main-index .flecha-der{display: none;}
     .plataformas-flex {flex-direction: column;}
     .plataformas-flex div{padding: 20px 0;}
-    .plataformas-flex div img{
-        height: 65px;}
+    .plataformas-flex div img{height: 65px;}
     .cont-subscripcion{flex-direction: column;}
 
-    
 }
-
 
 
 @media only screen and (max-width: 1120px) and (min-width: 768px){
-    .plataformas-flex div img{
-        height: 55px;}
+    .plataformas-flex div img{ height: 55px;}
 }
 
 @media only screen and (min-width: 1120px) {
-    .plataformas-flex div img{
-        height: 65px;}
+    .plataformas-flex div img{ height: 65px;}
 }
 
-
-  
 
 @media only screen and (min-width: 600px) {
     /* Para tablets: */
@@ -98,20 +84,25 @@
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
 
-    .header img{height: 30px;}
-
+    .header img{height: 30px;} 
     .hide-l{display: none;}
-
+    
+    .main-index .container-full-carrusel{flex-direction: row;}
+    .main-index .carrusel-info{margin-bottom: 20px;}
     .main-juegos .container-juego{flex-direction: row;}
-
-    .section-contacto form{
-        padding: 50px;}
-
-
-        
-
+    .section-contacto form{padding: 50px;}
+    .nosotros-bl2{ flex-direction: row-reverse; align-items: center;}
+    .nosotros-bl2 .bl-text p{ margin-left: 100px; margin-right: 20px;}
+    .nosotros-bl2 .bl-img{ flex: 1 1 40%;}
+    .nosotros-bl2 .bl-text{ flex: 1 1 60%;}
+    .nosotros-bl4{ flex-direction: row; align-items: center;}
+    .nosotros-bl4 .bl-img{ flex: 1 1 45%;}
+    .nosotros-bl4 .bl-text{ flex: 1 1 55%;}
+    .nosotros-bl4 .bl-text p{ margin-left: 20px; margin-right: 100px;}
 }
+
   
+
 @media only screen and (min-width: 768px) {
     /* Para escritorio: */
     .col-1 {width: 8.33%;}
@@ -142,21 +133,20 @@
         height: 100%;
         flex: 0.2 0 100%;
     }
-    
-    .info-contacto{border-left: 1px solid black;}
 
     .footer-main{
         display: flex;
         justify-content: space-between;
-        align-items: center;}
+        align-items: center;
+    }
 
-        .plataformas-flex {flex-direction: row;}
-
-        .cont-subscripcion{flex-direction: row;}
-        .cont-subscripcion .subscripcion-texto{border-right: 1px solid white;}
-
+    .info-contacto{border-left: 1px solid black;}
+    .plataformas-flex {flex-direction: row;}
+    .cont-subscripcion{flex-direction: row;}
+    .cont-subscripcion .subscripcion-texto{border-right: 1px solid white;}
 
 }
+
 
 
 
@@ -169,6 +159,8 @@ body{
     color: rgb(182, 182, 182);
     font-family: Calibri;
 }
+
+
 
 /*INICIO HEADER*/
 .header{
@@ -324,14 +316,12 @@ body{
 
 .main-index .container-full-carrusel{
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
 
 /*CARRUSEL DEL MAIN*/
 .main-index .carrusel-info{
     height: 70%;
-    margin-bottom: 20px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -363,7 +353,7 @@ body{
     color: black;
 }
 
-.main-index .carrusel-info .carrusel-info-text a:hover{
+.main-index .carrusel-info .carrusel-info-text a:hover, .nosotros-bl5 div a:hover{
     border-radius: 0px;
     background-color:#28262F;
     color: #ffff;
@@ -527,10 +517,183 @@ body{
 /*INICIO MAIN NOSOTROS*/
 
 .main-nosotros{
-    margin: 20px;
-    text-align: justify;
-    color: #edf0f2;
+    color: white;
 }
+
+.nosotros-enc{
+    height: 600px;
+    background-image: url("/imagenes/bg-nosotros.jpg");
+    background-position: center;
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items: center;
+    border-radius: 5px 5px 0 0 ;
+}
+
+.nosotros-enc .titulo-enc{
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.nosotros-enc p{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'bigShoulders';
+}
+
+.nosotros-enc .nombre-emp{
+    font-size: 6.5rem;
+    font-weight: bolder;
+}
+
+
+
+
+
+.nosotros-bl1{
+    background-color: rgb(8, 8, 8); /**************/
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nosotros-bl1 p{
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 400;
+    color: whitesmoke;
+    padding: 20px;
+}
+
+
+
+
+.nosotros-bl2{
+    height: 400px;
+    display: flex;
+    background-color: rgb(12, 19, 22); 
+}
+
+.nosotros-bl2 .bl-img{
+    height: 100%;
+    background-color: rgb(12, 19, 22); 
+    background-image: url("/imagenes/evilwithin.jpg");
+    background-position: center;
+    background-size: cover;
+
+    /*box-shadow: 20px 0 8px -2px rgb(12, 19, 22) inset;*/
+}
+
+.nosotros-bl2 .bl-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.nosotros-bl2 .bl-text p{
+    font-size: 1.1rem;
+    font-weight: lighter;
+    text-align: justify;
+    color: rgba(245, 245, 245, 0.877);
+    
+}
+
+.nosotros-bl3{
+    height: 800px;
+    background-image: url("/imagenes/studio-bl4.jpg");
+    background-position: center;
+    background-size: cover; 
+}
+
+
+
+.nosotros-bl4{
+    height: 400px;
+    display: flex;
+    background-color: rgb(10, 10, 10);
+}
+
+.nosotros-bl4 .bl-img{
+    height: 100%;
+    background-image: url("/imagenes/studio-bl3.jpg");
+    background-position: center;
+    background-size: cover;
+    /*box-shadow: -20px 0 10px -5px rgb(10, 10, 10) inset;*/
+}
+
+.nosotros-bl4 .bl-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.nosotros-bl4 .bl-text p{
+    font-size: 1.2rem;
+    font-weight: lighter;
+    text-align: right;
+    color: rgba(245, 245, 245, 0.877);
+    
+}
+
+
+.nosotros-bl5{
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background: rgb(10,10,10);
+    background: linear-gradient(0deg,  rgba(27,27,27,1) 20%, rgba(15,15,15,1) 50%, rgba(10,10,10,1) 80%);
+}
+
+
+.nosotros-bl5 h1{
+    font-family: 'bigShoulders';
+    font-size: 3rem;
+    margin: 0 20px 20px 20px;
+    text-align: center;
+}
+
+.nosotros-bl5 p{ 
+    font-size: 1.05rem;
+    font-weight: lighter;
+    margin: 0 20px 30px 20px;
+    text-align: center;
+}
+
+.nosotros-bl5 div{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'bigShoulders';
+}
+
+.nosotros-bl5 div a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    background-color: #edf0f2;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: all 0.5s;
+    text-align: center;
+}
+
+
+
+
+
+
 
 /*INICIO MAIN JUEGOS*/
 .main-juegos{
@@ -562,12 +725,12 @@ body{
     justify-content: center;
     align-items: center;
     flex: 0 0 50%;
-    background-color: rgba(27, 48, 57,1);
+    background-color: rgb(15, 15, 15);
 }
 
 .main-juegos .container-juego .card-texto{
-    padding-left:30px;
-    padding-right: 30px;
+    padding: 30px;
+    text-align: justify;
 }
 
 .main-juegos .container-juego img{
@@ -583,14 +746,19 @@ body{
 
 .main-juegos .container-juego h2{
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    font-family: 'bigShoulders';
+    font-weight: bold;
 }
 .main-juegos .container-juego h4{
     color: #ffbc0e;
+    font-weight: lighter;
 }
 .main-juegos .container-juego a{
     text-decoration: none;
     color: rgb(182, 182, 182);
+    font-family: 'bigShoulders';
+    font-size: 1.1rem;
 }
 
 .main-juegos .container-juego li a:hover{
@@ -601,8 +769,8 @@ body{
 /*INICIO MAIN CONTACTO*/
 
 .section-contacto form{
-    background-color: rgba(27, 48, 57,1);
-    color: white;
+    background-color: rgb(15, 15, 15);;
+    color: rgba(255, 255, 255, 0.788);
     flex: 0 0 50%;
     display: flex;
     flex-direction: column;
@@ -610,6 +778,7 @@ body{
 }
 .section-contacto form label{
     display: block;
+    font-weight: lighter;
 }
 .section-contacto form div{
     margin: 0;
@@ -621,18 +790,23 @@ body{
     width: 100%;
     padding: 5px;
     outline: 0;
+    background-color: inherit;
+    border-radius: 2px;
+    margin-top: 5px;
+    border: none;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.527);
+    color: white;
 }
 .section-contacto form button{
     background: #fff;
     border: 0;
-    text-transform: uppercase;
     padding: 15px;
     border-radius: 8px;
     color: black;
-    font-family: Calibri;
-    font-size: 1.2rem;
+    font-family: 'bigShoulders';
     font-weight: 500;
-    transition: all 1s;
+    font-size: 1.3rem;
+    transition: all 0.5s;
 }
 
 .section-contacto form button:hover{
@@ -647,8 +821,8 @@ body{
     transition: background-color 1s ease-out;
 }
 .info-contacto{
-    background: #1b3039;
-    color: #efefef;
+    background: rgb(15, 15, 15);
+    color: #efefefc4;
     padding: 50px;
     border-left: 1px solid black;
     text-align: right;
@@ -675,12 +849,12 @@ body{
 .info-contacto iframe{
     width: 100%;
     margin-top: 10px;
+    filter:grayscale(0.7) invert(92%) hue-rotate(250deg);
 }
-
 
 .info-contacto li a{
     text-decoration: none;
-    color: rgb(199, 128, 71);
+    color: #ffbc0e;
 }
 
 .info-contacto li a:hover{
@@ -689,8 +863,11 @@ body{
 
 .info-contacto h3{
     font-family: 'bigShoulders';
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
+
+
+
 
 
 
@@ -706,7 +883,7 @@ footer{
 }
 
 .footer-main .logo img{
-    height: 50px;
+    height: 65px;
     width: auto;
     transition: all 1s;
 }
@@ -726,6 +903,7 @@ footer{
     color: #efefef;
     margin-bottom: 5px;
     text-align: center;
+    font-weight: lighter;
 }
 .footer-main .box p a{
     text-decoration: none;
@@ -754,4 +932,10 @@ footer{
 }
 .copyright small, .copyright strong{
     font-size: 0.7rem;
+}
+
+
+::selection{
+    background-color: #28262F;
+    color: white;
 }

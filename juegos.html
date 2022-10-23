@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon_io/favicon.ico">
+    <title>Juegos</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 
@@ -14,83 +15,26 @@
         
     </header>
 
-    <main class="main-juegos col-9 col-s-10">
-        <div class="container-juego" name="ResidentEvilVillage">
+    <main class="main-juegos col-11 col-s-11">
+        <div class="container-juego" name="container-juego" v-for="game of games">
             <div class="card">
-                <img src="imagenes/p-revillage.jpg" alt="Residen Evil Village Portada">
+                <img :src="game.image" :alt="game.name">
             </div>
             <div class="card card-texto">
                 <ul>
-                    <li><h2>Resident Evil Village</h2></li>
-                    <li><h4>Publicado el : 02/05/2021</h4></li>
-                    <li><p>Ambientada unos años después de los escalofriantes sucesos del aclamado Resident Evil 7: Biohazard, esta flamante nueva historia arranca con Ethan Winters y su esposa Mia viviendo plácidamente en un nuevo lugar, lejos de pesadillas pasadas. Sin embargo, justo cuando están empezando su nueva vida juntos, la tragedia vuelve a cebarse con ellos.
-                    </p></li>
-                    <li><a href="https://www.residentevil.com/village/es/" target="_blank">Saber más +</a></li>  
-                </ul>
-            </div>
-        </div>
-        <div class="container-juego" name="ResidentEvilVillage">
-            <div class="card">
-                <img src="imagenes/p-outlast.jpg" alt="Outlast Portada">
-            </div>
-            <div class="card card-texto">
-                <ul>
-                    <li><h2>Outlast</h2></li>
-                    <li><h4>Publicado el : 04/09/2013</h4></li>
-                    <li><p>El horror aguarda en las lejanas montañas de Colorado, dentro del manicomio del monte Massive. Tras pasar años abandonado, el psiquiátrico ha vuelto a abrir sus puertas. El departamento de “investigación y caridad” de la corporación transnacional Murkoff ha estado trabajando en su interior en la más estricta clandestinidad... hasta ahora.</p></li>
-                    <li><a href="https://www.residentevil.com/village/es/" target="_blank">Saber más +</a></li>    
-                </ul>
-            </div>
-        </div>
-        <div class="container-juego" name="ResidentEvilVillage">
-            <div class="card ">
-                <img src="imagenes/p-evilwhitin.jpg" alt="The Evil Within Portada">
-            </div>
-            <div class="card card-texto">
-                <ul>
-                    <li><h2>The Evil Within</h2></li>
-                    <li><h4>Publicado el : 14/10/2014</h4></li>
-                    <li><p>Durante la inspección de la escena de un terrible asesinato en masa, el inspector Sebastián Castellanos y sus colegas se encuentran con una misteriosa y poderosa fuerza. Tras presenciar la matanza de sus compañeros, Sebastián cae en una emboscada y pierde el conocimiento. Al despertar, se encuentra dentro de un mundo sobrecogedor y desquiciado en el que espantosos seres vagan entre los cadáveres. Sebastián se embarcará en un viaje aterrador para descubrir el origen de estas fuerzas del mal y deberá enfrentarse a un terror inimaginable con un único objetivo: sobrevivir.</p></li>
-                    <li><a href="https://www.residentevil.com/village/es/" target="_blank">Saber más +</a></li>  
-                </ul>
-            </div>
-        </div>
-        <div class="container-juego" name="ResidentEvilVillage">
-            <div class="card">
-                <img src="imagenes/p-deadspace.jpeg" alt="Dead Space Portada">
-            </div>
-            <div class="card card-texto">
-                <ul>
-                    <li><h2>Dead Space</h2></li>
-                    <li><h4>Publicado el : 13/10/2008</h4></li>
-                    <li><p>Una enorme nave minera del espacio profundo se oscurece después de desenterrar un extraño artefacto en un planeta distante. El ingeniero Isaac Clarke se embarca en la misión de reparación, solo para descubrir un baño de sangre de pesadilla: la tripulación del barco fue horriblemente asesinada e infectada por un flagelo alienígena. Ahora Isaac está aislado, atrapado y comprometido en una lucha desesperada por sobrevivir.</p></li>
-                    <li><a href="https://www.residentevil.com/village/es/" target="_blank">Saber más +</a></li>  
-                </ul>
-            </div>
-        </div>
-        <div id="ultimojuego" class="container-juego" name="ResidentEvilVillage">
-            <div class="card">
-                <img src="imagenes/p-amnesia.jpg" alt="Amnesia: The Dark Descent Portada">
-            </div>
-            <div class="card card-texto">
-                <ul>
-                    <li><h2>Amnesia: The Dark Descent</h2></li>
-                    <li><h4>Publicado el : 08/09/2010</h4></li>
-                    <li><p>El juego sitúa al jugador en el papel de Daniel, que despierta en un oscuro castillo sin apenas recuerdos de quién es y su pasado.5​ Todo lo que puede recordar es su nombre, su origen londinense y que algo está persiguiéndolo.6​7​ Al encontrar una nota escrita por sí mismo que le insistía a descender a la parte inferior del castillo y matar a su enemigo, decide comenzar el descenso. A partir de hojas de su propio diario, que se encuentran esparcidas a lo largo del juego, Daniel va recobrando su memoria y redescubriendo su identidad y su historia.</p></li>
-                    <li><a href="https://www.residentevil.com/village/es/" target="_blank">Saber más +</a></li>  
+                    <li><h2>{{game.name}}</h2></li>
+                    <li><h4>{{game.fechaPublic}}</h4></li>
+                    <li><p>{{game.plot}}</p></li>
+                    <li><a href="{{game.urlWeb}}" target="_blank">Saber más +</a></li>  
                 </ul>
             </div>
         </div>
     </main>
 
     <footer id="footer">
-
-
-
-        
-        
     </footer>
 
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./main.js"></script>
 </body>
 
