@@ -93,7 +93,7 @@
     }
 
     .main-index .container-full-carrusel {
-        flex-direction: column;
+        display: block;
     }
 
 }
@@ -198,6 +198,7 @@
     }
 
     .main-index .container-full-carrusel {
+        display: flex;
         flex-direction: row;
     }
 
@@ -513,6 +514,9 @@ body {
 }
 
 
+
+
+
 /*INICIO MAIN INDEX*/
 .main-index {
     text-align: justify;
@@ -523,13 +527,14 @@ body {
 }
 
 .main-index .container-full-carrusel {
-    display: flex;
     align-items: center;
 }
 
 /*CARRUSEL DEL MAIN*/
 .main-index .carrusel-info {
-    height: 70%;
+    height: 800px;
+    background-position: center;
+    background-size: cover;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -579,6 +584,23 @@ body {
     font-family: Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(224, 224, 224);
 }
+
+
+
+/*.main-index .barra-izq{
+    width: 3%;
+    height: 40rem;
+    position: absolute;
+    transition: all 1s;
+}
+
+.main-index .barra-der{
+    width: 3%;
+    height: 40rem;
+    position: absolute;
+    right: 0;
+    transition: all 1s;
+}*/
 
 .main-index .barra-izq:hover,
 .main-index .barra-der:hover {
@@ -718,7 +740,7 @@ body {
 
 .nosotros-enc {
     height: 600px;
-    background-image: url("./imagenes/bg-nosotros.jpg");
+    background-image: url("imagenes/bg-nosotros.jpg");
     background-position: center;
     background-size: cover;
     display: flex;
@@ -743,6 +765,10 @@ body {
     font-size: 6.5rem;
     font-weight: bolder;
 }
+
+
+
+
 
 .nosotros-bl1 {
     background-color: rgb(8, 8, 8);
@@ -774,7 +800,7 @@ body {
 .nosotros-bl2 .bl-img {
     height: 100%;
     background-color: rgb(12, 19, 22);
-    background-image: url("./imagenes/evilwithin.jpg");
+    background-image: url("imagenes/evilwithin.jpg");
     background-position: center;
     background-size: cover;
 
@@ -798,7 +824,7 @@ body {
 
 .nosotros-bl3 {
     height: 800px;
-    background-image: url("./imagenes/studio-bl4.jpg");
+    background-image: url("imagenes/studio-bl4.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -813,7 +839,7 @@ body {
 
 .nosotros-bl4 .bl-img {
     height: 100%;
-    background-image: url("./imagenes/studio-bl3.jpg");
+    background-image: url("imagenes/studio-bl3.jpg");
     background-position: center;
     background-size: cover;
     /*box-shadow: -20px 0 10px -5px rgb(10, 10, 10) inset;*/

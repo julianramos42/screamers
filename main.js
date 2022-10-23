@@ -141,23 +141,22 @@ function validarFormulario(evento) {
 
 
 
-function subscribirse(e) {
-    if (e && e.keyCode !== 0) {
-        if (document.getElementById('email-subscripcion').value == "") {
-            alert("Por favor, ingrese su mail");
-            return;
-        }
-        else {
-            alert("¡Suscripción éxitosa!");
-            return;
-        }
 
-    }
+if (window.location.href.match('index.html') != null) {
+
+    document.getElementById('email-subscripcion').addEventListener('keyup', function (event) {
+        if (event.code === 'Enter') {
+            var correo = document.getElementById('email-subscripcion').value;
+            var ck_email = /^([\w-]+(?:\.[\w-]+))@((?:[\w-]+\.)\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+
+            if (!(ck_email.test(correo)) || correo.length == 0) {
+                alert('El mail ingresado no es válido.');
+                return false;
+            }
+
+        }
+    });
 }
-
-
-
-
 
 
 
@@ -168,19 +167,19 @@ var textos = [
     {
         titulo: 'Juegos',
         descripcion: 'En Screamers ofrecemos experiencias inovidables, donde ponemos a prueba todos los sentidos del jugador. Explora nuestros juegos y sumergete en un mundo de supervivencia y horror.',
-        img: 'imagenes/revillage.jpg',
+        img: "url('imagenes/revillage.jpg')",
         link: './juegos.html'
     },
     {
         titulo: 'Nosotros',
         descripcion: 'Nuestro estudio se conforma por fanáticos del género, dedicados a demostrar lo que es el verdadero terror. Entérate de nosotros.',
-        img: 'imagenes/outlast.jpg',
+        img: "url('imagenes/outlast.jpg')",
         link: './nosotros.html'
     },
     {
         titulo: 'Contacto',
         descripcion: 'Sugerencias, opiniones, oportunidades. Estamos enfocados a escucharlos y lograr hacer de lo nuestro la experiencia más real jamás sentida. Escríbenos.',
-        img: 'imagenes/plaguetale.jpg',
+        img: "url('imagenes/plaguetale.jpg')",
         link: './contacto.html'
     },
 ];
@@ -194,7 +193,10 @@ function carrousel(contenedor) {
 
         if (tgt == atras) {
             if (cont > 0) {
-                img.src = textos[cont - 1].img;
+                /*img.src = textos[cont - 1].img;*/
+
+                document.getElementById("carrusel-info-img").style.backgroundImage = textos[cont - 1].img;
+
                 document.getElementById('text').innerHTML = `
                     <h2>${textos[cont - 1].titulo}</h2>
                     <p>${textos[cont - 1].descripcion}</p>
@@ -202,7 +204,10 @@ function carrousel(contenedor) {
                 `;
                 cont--;
             } else {
-                img.src = textos[textos.length - 1].img;
+                /*img.src = textos[textos.length - 1].img;*/
+
+                document.getElementById("carrusel-info-img").style.backgroundImage = textos[textos.length - 1].img;
+
                 document.getElementById('text').innerHTML = `
                     <h2>${textos[textos.length - 1].titulo}</h2>
                     <p>${textos[textos.length - 1].descripcion}</p>
@@ -212,7 +217,10 @@ function carrousel(contenedor) {
             }
         } else if (tgt == adelante) {
             if (cont < textos.length - 1) {
-                img.src = textos[cont + 1].img;
+                /*img.src = textos[cont+1].img;*/
+
+                document.getElementById("carrusel-info-img").style.backgroundImage = textos[cont + 1].img;
+
                 document.getElementById('text').innerHTML = `
                     <h2>${textos[cont + 1].titulo}</h2>
                     <p>${textos[cont + 1].descripcion}</p>
@@ -220,7 +228,11 @@ function carrousel(contenedor) {
                 `;
                 cont++;
             } else {
-                img.src = textos[0].img;
+                /*img.src = textos[0].img;*/
+
+                document.getElementById("carrusel-info-img").style.backgroundImage = textos[0].img;
+
+
                 document.getElementById('text').innerHTML = `
                     <h2>${textos[0].titulo}</h2>
                     <p>${textos[0].descripcion}</p>
