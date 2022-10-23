@@ -58,7 +58,7 @@ document.getElementById("header").innerHTML = `
                 <li><a href="https://www.tumblr.com" target="_blank"><img src="./imagenes/tumblr.png" alt="tumblr"></a></li>
 </ul>
 `
-document.getElementById("footer").innerHTML=`
+document.getElementById("footer").innerHTML = `
 <div class="footer-main">
 
 <div class="box col-3">
@@ -91,11 +91,10 @@ document.getElementById("footer").innerHTML=`
 
 
 //Mostrar/Ocular menú de celular
-function showMenu(){
+function showMenu() {
     let obj = document.getElementById("menu_hamb");
-    if(obj.style.display=='none')
-        {obj.style.display='flex'}
-    else{obj.style.display='none'}
+    if (obj.style.display == 'none') { obj.style.display = 'flex' }
+    else { obj.style.display = 'none' }
 }
 
 
@@ -117,7 +116,7 @@ function validarFormulario(evento) {
     var emailValue = document.getElementById('email').value;
     var email = document.getElementById('email');
     emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    if (emailValue.length==0 || emailRegex.test(email)) {
+    if (emailValue.length == 0 || emailRegex.test(email)) {
         alert('El email no es valido');
         return;
     }
@@ -142,18 +141,18 @@ function validarFormulario(evento) {
 
 
 
-function subscribirse(e){
-    if(e && e.keyCode !== 0) {
-        if(document.getElementById('email-subscripcion').value == ""){
+function subscribirse(e) {
+    if (e && e.keyCode !== 0) {
+        if (document.getElementById('email-subscripcion').value == "") {
             alert("Por favor, ingrese su mail");
             return;
         }
-        else{
+        else {
             alert("¡Suscripción éxitosa!");
             return;
         }
-        
-     }
+
+    }
 }
 
 
@@ -186,48 +185,48 @@ var textos = [
     },
 ];
 var cont = 0;
-function carrousel(contenedor){
-    contenedor.addEventListener('click', e =>{
+function carrousel(contenedor) {
+    contenedor.addEventListener('click', e => {
         let atras = contenedor.querySelector('.atras'),
             adelante = contenedor.querySelector('.adelante'),
             img = contenedor.querySelector('img'),
             tgt = e.target;
 
-        if(tgt == atras){
-            if(cont > 0){
+        if (tgt == atras) {
+            if (cont > 0) {
                 img.src = textos[cont - 1].img;
-                document.getElementById('text').innerHTML =`
+                document.getElementById('text').innerHTML = `
                     <h2>${textos[cont - 1].titulo}</h2>
                     <p>${textos[cont - 1].descripcion}</p>
                     <a href="${textos[cont - 1].link}">Ver más</a>
                 `;
                 cont--;
-            }else{
+            } else {
                 img.src = textos[textos.length - 1].img;
-                document.getElementById('text').innerHTML =`
+                document.getElementById('text').innerHTML = `
                     <h2>${textos[textos.length - 1].titulo}</h2>
                     <p>${textos[textos.length - 1].descripcion}</p>
                     <a href="${textos[textos.length - 1].link}">Ver más</a>
                 `;
-                cont = textos.length-1;
+                cont = textos.length - 1;
             }
-        } else if(tgt == adelante){
-            if(cont < textos.length - 1){
-                img.src = textos[cont+1].img;
-                document.getElementById('text').innerHTML =`
-                    <h2>${textos[cont+1].titulo}</h2>
-                    <p>${textos[cont+1].descripcion}</p>
-                    <a href="${textos[cont+1].link}">Ver más</a>
+        } else if (tgt == adelante) {
+            if (cont < textos.length - 1) {
+                img.src = textos[cont + 1].img;
+                document.getElementById('text').innerHTML = `
+                    <h2>${textos[cont + 1].titulo}</h2>
+                    <p>${textos[cont + 1].descripcion}</p>
+                    <a href="${textos[cont + 1].link}">Ver más</a>
                 `;
                 cont++;
-            }else{
+            } else {
                 img.src = textos[0].img;
-                document.getElementById('text').innerHTML =`
+                document.getElementById('text').innerHTML = `
                     <h2>${textos[0].titulo}</h2>
                     <p>${textos[0].descripcion}</p>
                     <a href="${textos[0].link}">Ver más</a>
                 `;
-                cont=0;
+                cont = 0;
             }
         }
     });
@@ -238,37 +237,37 @@ document.addEventListener("DOMContentLoaded", () => {
     carrousel(contenedor);
 });
 
-const { createApp } = Vue  
-  createApp({
+const { createApp } = Vue
+createApp({
     data() {
-      return {
-        url:'https://my-json-server.typicode.com/nach09/api-json-gam3s/games',
-        games:[],
-        error:false,
-        nroerror:0,
-        cargando:true
-      }
-    },  
-    methods: {
-      fetchData(url) {
- 
-          fetch(url)
-              .then(response => response.json())
-              .then(data => {
-                this.games=data
-                this.cargando=false
-                 }
-              )
-              .catch(error=>{
-                console.log("error"+error)
-                this.error=true
-                this.nroerror=error
-              }
-              )
-      }
+        return {
+            url: 'https://my-json-server.typicode.com/nach09/api-json-gam3s/games',
+            games: [],
+            error: false,
+            nroerror: 0,
+            cargando: true
+        }
     },
-    created(){
- 
-      this.fetchData(this.url)
+    methods: {
+        fetchData(url) {
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    this.games = data
+                    this.cargando = false
+                }
+                )
+                .catch(error => {
+                    console.log("error" + error)
+                    this.error = true
+                    this.nroerror = error
+                }
+                )
+        }
+    },
+    created() {
+
+        this.fetchData(this.url)
     }
-  }).mount('.main-juegos')
+}).mount('.main-juegos')
